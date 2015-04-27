@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<h2> Should I Have Another Drink? </h2>
+	<div ng-controller='QuestionController'>
+
+	<p>
+		{{questions.question1}}
+		<form name="radioForm" novalidate>
+			<ng-form name="radioButtons">
+				<label>
+					<input type="radio" name="response" ng-model="radioResponse.Yes" ng-click="displayAnswer()">
+					Yes
+				</label>
+				<label>
+					<input type="radio"	name="response" ng-model="radioResponse.No">
+					No
+				</label>
+			</ng-form>
+				<tt> answer = {{radioResponse | json}}</tt><br/>
+		</form>
+	</p>
+
+
+
+
+
+
+
+
+
+
+	<p>
+		{{questions.question2}} :
+		<input type="text" ng-model="">
+	</p>
+
+
+       <!-- ng-model=""
+       value=""
+       [name=""]
+       [ng-change=""]
+       ng-value=""> -->
+
+	<br>
+
+
+	<div>
+	<!-- handle submit -->
+
+	</div>
+
+</body>
+</html>
