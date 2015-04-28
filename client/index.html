@@ -13,19 +13,12 @@
 	<script type="text/javascript" src="app.js"></script>
 </head>
 <body>
-	<!-- <div class="page-header">
-  	<h1>Should I Have Another Drink?</h1>
-	</div> -->
 
-	<!-- <div class="jumbotron">
-  	<h1> </h1>
-  	<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-	</div> -->
-
-	<div class="image">
+	<div class="image" ng-controller='QuestionController'>
 		<img src="http://i.giphy.com/LnKLJFtVQ0WtO.gif" id="background">
-		<h1><span>Should I Have Another Drink?</span></h1>
+		<h1 ng-click="goToQuestions()"><span>Should I Have Another Drink?</span></h1>
 	</div>
+
 
 
 </body>

@@ -12,17 +12,19 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </head>
+
 <body>
-	<div class="jumbotron">
-  	<h1>Should I Have Another Drink? </h1>
-  	<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+
+	<div class="jumbotron" ng-controller="QuestionController">
+  <h2>{{question}}</h2>
+  <span><a class="btn btn-primary btn-lg" href="#" role="button" ng-click="nextQuestion();incrementAnswer()">Yes</a></span>
+  <span><a class="btn btn-primary btn-lg" href="#" role="button" ng-click="nextQuestion()">No</a></span>
+		<!-- <p ng-model="answerCounter">
+			{{answerCounter}}
+		</p> -->
 	</div>
 
-	<div ng-controller='QuestionController'>
-
-	<p>
-		{{question}}
-		<form name="radioForm">
+		<!-- <form name="radioForm">
 			<ng-form name="radioButtons">
 				<label>
 					<input type="radio" name="response" ng-model="" ng-click="nextQuestion()">
@@ -34,11 +36,8 @@
 				</label>
 			</ng-form>
 		</form>
-	</p>
+	</div> -->
 
-	<p ng-model="answerCounter">
-		{{answerCounter}}
-	</p>
 
 	<!-- <div class="answers" ng-model="answers" ng-hide="hide">
 		{{answers.no}}
@@ -48,13 +47,5 @@
 		{{answers.yes}}
 	</div> -->
 
-
-
-	<br>
-	<div>
-	<!-- handle submit -->
-
-	</div>
-
-</body>
+	</body>
 </html>
