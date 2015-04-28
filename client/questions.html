@@ -13,20 +13,48 @@
 	<script type="text/javascript" src="app.js"></script>
 </head>
 <body>
-	<!-- <div class="page-header">
-  	<h1>Should I Have Another Drink?</h1>
-	</div> -->
-
-	<!-- <div class="jumbotron">
-  	<h1> </h1>
+	<div class="jumbotron">
+  	<h1>Should I Have Another Drink? </h1>
   	<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-	</div> -->
-
-	<div class="image">
-		<img src="http://i.giphy.com/LnKLJFtVQ0WtO.gif" id="background">
-		<h1><span>Should I Have Another Drink?</span></h1>
 	</div>
 
+	<div ng-controller='QuestionController'>
+
+	<p>
+		{{question}}
+		<form name="radioForm">
+			<ng-form name="radioButtons">
+				<label>
+					<input type="radio" name="response" ng-model="" ng-click="nextQuestion()">
+					Yes
+				</label>
+				<label>
+					<input type="radio"	name="response" ng-model="" ng-click="nextQuestion()">
+					No
+				</label>
+			</ng-form>
+		</form>
+	</p>
+
+	<p ng-model="answerCounter">
+		{{answerCounter}}
+	</p>
+
+	<!-- <div class="answers" ng-model="answers" ng-hide="hide">
+		{{answers.no}}
+	</div>
+
+	<div class="answers" ng-model="answers" ng-hide="hide">
+		{{answers.yes}}
+	</div> -->
+
+
+
+	<br>
+	<div>
+	<!-- handle submit -->
+
+	</div>
 
 </body>
 </html>

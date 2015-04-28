@@ -16,17 +16,33 @@
 
 	  $scope.nextQuestion = function() {
 	  	$scope.questionCounter++;
-	  	$scope.question = $scope.questions[$scope.questionCounter];
+	  	if($scope.questionCounter === $scope.questions.length) {
+	  		$scope.displayAnswer();
+	  	} else {
+	  		$scope.question = $scope.questions[$scope.questionCounter];
+	  	}
+
+	  	var resetButton = function() {
+
+	  	};
+	  	resetButton();
+
 	  };
 
 	  $scope.incrementAnswer = function() {
 	  	$scope.answerCounter++;
 	  };
 
-		$scope.answers = {
-			no: 'Don\'t do that. Go home.',
-			yes: 'The night is young! Party on.'
-		};
+	  $scope.displayAnswer = function() {
+
+			$scope.answers = [
+				'Don\'t do that. Go home.',
+				'The night is young! Party on.'
+		  ];
+
+
+			alert($scope.answers[0]);
+		}
 
 	});
 
