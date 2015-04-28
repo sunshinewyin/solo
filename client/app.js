@@ -3,37 +3,30 @@
 
 	app.controller('QuestionController', function($scope) {
 
-	  $scope.counter = 0,
+	  $scope.questionCounter = 0;
+	  $scope.answerCounter = 0;
+	  $scope.questions = [
+			'Do I want a burrito?',
+			'Is this song my jam?',
+			'Do I have sweet dance moves?',
+			'Is texting my ex a good idea?',
+		];
 
-	  $scope.increment = function() { $scope.counter++; },
+		$scope.question = $scope.questions[$scope.questionCounter];
 
-		$scope.questions = {
-			question1: 'Is texting my ex a good idea?',
-			question2: 'What is 2 + 2?',
-			question3: '?'
-		},
+	  $scope.nextQuestion = function() {
+	  	$scope.questionCounter++;
+	  	$scope.question = $scope.questions[$scope.questionCounter];
+	  };
 
-		$scope.radioResponse = ['Yes', 'No'],
+	  $scope.incrementAnswer = function() {
+	  	$scope.answerCounter++;
+	  };
 
 		$scope.answers = {
 			no: 'Don\'t do that. Go home.',
 			yes: 'The night is young! Party on.'
-		}
-
-		// $scope.process
-
-		// $scope.processAnswer = function(radioResponse) {
-		// 	if(radioResponse === 'yes') {
-		// 		$scope.answer = true;
-		// 	} else if (radioResponse === 'no') {
-		// 		$scope.answer = false;
-		// 	}
-		// },
-
-
-
-
-
+		};
 
 	});
 
