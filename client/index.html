@@ -21,25 +21,28 @@
 		<form name="radioForm">
 			<ng-form name="radioButtons">
 				<label>
-					<input type="radio" name="response" ng-model="radioResponse[0]" ng-click="processAnswer('yes')">
+					<input type="radio" name="response" ng-model="radioResponse[0]" ng-click="increment()">
 					Yes
 				</label>
 				<label>
-					<input type="radio"	name="response" ng-model="radioResponse[1]" ng-click="processAnswer('no')">
+					<input type="radio"	name="response" ng-model="radioResponse[1]">
 					No
 				</label>
 			</ng-form>
 		</form>
 	</p>
 
-	<div class="answers" ng-model="answers" ng-show="answer">
+	<p ng-model="counter">
+		{{counter}}
+	</p>
+	<!-- <div class="answers" ng-model="answers" ng-show="answer">
 		{{answers.no}}
 	</div>
 
 	<div class="answers" ng-model="answers" ng-hide="answer">
 		{{answers.yes}}
 	</div>
-
+ -->
 
 
 	<br>
