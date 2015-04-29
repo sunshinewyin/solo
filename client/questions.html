@@ -13,30 +13,23 @@
 	<script type="text/javascript" src="app.js"></script>
 </head>
 
-<body>
+<body ng-controller="QuestionController">
 
-	<div class="jumbotron" ng-controller="QuestionController">
-  <h2>{{question}}</h2>
-  <span><a class="btn btn-primary btn-lg" href="#" role="button" ng-click="nextQuestion();incrementAnswer()">Yes</a></span>
-  <span><a class="btn btn-primary btn-lg" href="#" role="button" ng-click="nextQuestion()">No</a></span>
+	<div class="jumbotron">
+  	<h2>{{question}}</h2>
+  	<span><a class="btn btn-primary btn-lg" href="#" role="button" ng-click="nextQuestion();incrementAnswer()">Hell Yeah</a></span>
+  	<span><a class="btn btn-primary btn-lg" href="#" role="button" ng-click="nextQuestion()">Naw Man</a></span>
 		<!-- <p ng-model="answerCounter">
 			{{answerCounter}}
 		</p> -->
 	</div>
 
-		<!-- <form name="radioForm">
-			<ng-form name="radioButtons">
-				<label>
-					<input type="radio" name="response" ng-model="" ng-click="nextQuestion()">
-					Yes
-				</label>
-				<label>
-					<input type="radio"	name="response" ng-model="" ng-click="nextQuestion()">
-					No
-				</label>
-			</ng-form>
-		</form>
-	</div> -->
+	<div class="photos" ng-model="photos">
+
+		<img ng-src="{{photo}}">
+
+	</div>
+
 
 
 	<!-- <div class="answers" ng-model="answers" ng-hide="hide">

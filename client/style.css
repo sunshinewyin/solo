@@ -20,6 +20,18 @@ h1 span {
    padding: 10px;
 }
 
-.btn {
-	font-color: green;
+.jumbotron {
+	background-color: orange;
+	text-align: center;
 }
+
+img {
+	display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.image {
+  background-color: black;
+}
+

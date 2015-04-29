@@ -26,13 +26,28 @@
 	  $scope.questionCounter = 0;
 	  $scope.answerCounter = 0;
 	  $scope.questions = [
-			'Do I want a burrito?',
-			'Is this song my jam?',
-			'Do I have sweet dance moves?',
-			'Is texting my ex a good idea?',
+			'Am I craving a burrito?',
+			'Is this bar my personal dance floor, and do all my fans want to see me twerk?',
+			'Do I need to code tomorrow?',
+			'Does this person seem attractive?',
+			'Is texting my ex a good idea?'
 		];
 
+		$scope.photos = [
+			"burrito2.png",
+			"twerking.gif",
+			"coding.jpg",
+			"trolldoll.jpg",
+			"text.jpg"
+		];
+
+		$scope.goToQuestions = function() {
+			console.log('go to questions got called');
+			$window.location.href = "/questions.html";
+		}
+
 		$scope.question = $scope.questions[$scope.questionCounter];
+		$scope.photo = $scope.photos[$scope.questionCounter];
 
 	  $scope.nextQuestion = function() {
 	  	$scope.questionCounter++;
@@ -40,8 +55,10 @@
 	  		$scope.displayAnswer();
 	  	} else {
 	  		$scope.question = $scope.questions[$scope.questionCounter];
+	  		$scope.photo = $scope.photos[$scope.questionCounter];
+	  		console.log($scope.question);
+	  		console.log($scope.photo);
 	  	}
-
 	  };
 
 	  $scope.incrementAnswer = function() {
@@ -59,16 +76,7 @@
 	  	} else if ($scope.answerCounter >= $scope.questions.length/2) {
 	  		alert($scope.answers[0]);
 	  	}
-
 		}
-
-		$scope.goToQuestions = function() {
-			console.log('go to questions got called');
-
-			$window.location.href = "/questions.html";
-
-		}
-
 	});
 
 })();
